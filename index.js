@@ -11,4 +11,10 @@ app.use("/frames", express.static(path.join(__dirname, "frames")));
 
 app.get("/", (req, res) => res.send("Hello from backend!"));
 
-app.listen(PORT, () => console.log(`🚀 Server ready on port ${PORT}`));
+// IMPORTANT: Export for Vercel
+module.exports = app;
+
+// Only listen if running locally
+if (require.main === module) {
+    app.listen(PORT, () => console.log(`🚀 Server ready on port ${PORT}`));
+}
