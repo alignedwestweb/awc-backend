@@ -2,3 +2,5 @@
 .env.production
 .env.staging
 firebase-service-account.json
+node_modules/
+dist/
