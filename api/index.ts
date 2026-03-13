@@ -2,10 +2,10 @@ import express, { Request, Response } from "express"
 import dotenv from "dotenv"
 import cors from "cors"
 import path from "path"
-import { db, admin } from "./firebase.js"
+import { db, admin } from "../firebase.ts"
 import { fileURLToPath } from "url"
 import { RecaptchaEnterpriseServiceClient } from "@google-cloud/recaptcha-enterprise"
-import { verifyRecaptcha } from "./src/utils/verifyRecaptcha.js"
+import { verifyRecaptcha } from "../src/utils/verifyRecaptcha.js"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
