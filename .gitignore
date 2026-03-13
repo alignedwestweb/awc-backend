@@ -4,4 +4,4 @@
 firebase-service-account.json
 node_modules/
 dist/
-index,js
+index.js
